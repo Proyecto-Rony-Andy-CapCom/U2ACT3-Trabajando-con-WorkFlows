@@ -1,0 +1,19 @@
+name: First Push
+on:
+  push:
+
+jobs:
+  tarea1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say Hi
+        run: |
+          echo "Hi my first push"
+          echo "My name Jose Andres"
+          echo "Id ${{github.event.head_commit.message}}"
+          echo "Autor: ${{ github.event.head_commit.author.name }}"
+          echo "Id: ${{ github.sha }}"
+          echo "URL: ${{ github.event.head_commit.url }}"
+          echo "Rama: ${{ github.ref_name }}"
+          echo "Repositorio: ${{ github.repository }}"
