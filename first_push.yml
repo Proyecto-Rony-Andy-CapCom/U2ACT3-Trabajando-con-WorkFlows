@@ -1,0 +1,13 @@
+name: First Push
+on:
+  push:
+
+jobs:
+  tarea1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say Hi
+        run: |
+          echo "Hi my first push"
+          echo "My name is Jose Andres Gutierrez Vargas"
