@@ -4,9 +4,24 @@
   "description": "Proyecto para práctica de GitHub Actions",
   "main": "index.js",
   "scripts": {
-    "lint": "echo ESLint ejecutado correctamente",
-    "test": "echo Pruebas ejecutadas correctamente"
+    "lint": "eslint .",
+    "test": "jest"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Proyecto-Rony-Andy-CapCom/U2ACT3-Trabajando-con-WorkFlows.git"
+  },
+  "keywords": [],
   "author": "",
-  "license": "MIT"
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Proyecto-Rony-Andy-CapCom/U2ACT3-Trabajando-con-WorkFlows/issues"
+  },
+  "homepage": "https://github.com/Proyecto-Rony-Andy-CapCom/U2ACT3-Trabajando-con-WorkFlows#readme",
+  "devDependencies": {
+    "eslint": "^10.4.1",
+    "globals": "^17.6.0",
+    "jest": "^30.4.2"
+  }
 }
