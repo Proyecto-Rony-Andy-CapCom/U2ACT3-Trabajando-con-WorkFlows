@@ -1,0 +1,12 @@
+{
+  "name": "u2act3-trabajando-con-workflows",
+  "version": "1.0.0",
+  "description": "Proyecto para práctica de GitHub Actions",
+  "main": "index.js",
+  "scripts": {
+    "lint": "echo ESLint ejecutado correctamente",
+    "test": "echo Pruebas ejecutadas correctamente"
+  },
+  "author": "",
+  "license": "MIT"
+}

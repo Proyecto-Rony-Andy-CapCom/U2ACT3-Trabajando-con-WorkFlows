@@ -1,0 +1,62 @@
+name: CI/CD Pipeline
+
+on:
+push:
+branches:
+- main
+- develop
+
+pull_request:
+branches:
+- main
+- develop
+
+jobs:
+test:
+runs-on: ubuntu-latest
+
+```
+steps:
+  - name: Descargar código
+    uses: actions/checkout@v4
+
+  - name: Configurar Node.js
+    uses: actions/setup-node@v4
+    with:
+      node-version: 20
+
+  - name: Instalar dependencias
+    run: npm install
+
+  - name: Mensaje de prueba
+    run: echo "Workflow ejecutado correctamente"
+
+  - name: Ejecutar ESLint
+    run: npm run lint
+
+  - name: Ejecutar pruebas
+    run: npm test
+```
+
+deploy:
+needs: test
+if: github.ref == 'refs/heads/main'
+
+```
+runs-on: ubuntu-latest
+
+steps:
+  - name: Descargar código
+    uses: actions/checkout@v4
+
+  - name: Configurar Node.js
+    uses: actions/setup-node@v4
+    with:
+      node-version: 20
+
+  - name: Instalar dependencias
+    run: npm install
+
+  - name: Despliegue simulado
+    run: echo "Aquí se realizaría el despliegue a Vercel"
+```
