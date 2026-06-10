@@ -1,0 +1,19 @@
+name: Pull Request 
+
+on:
+  pull_request: 
+
+jobs:
+  tarea1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Desplegar datos del Pull Request
+        run: |
+          echo "DATOS DEL PULL REQUEST"
+          echo "Datos destino (Base branch): ${{ github.base_ref }}"
+          echo "Datos origen (Head branch): ${{ github.head_ref }}"
+          echo "Título: ${{ github.event.pull_request.title }}"
+          echo "Contenido (Descripción): ${{ github.event.pull_request.body }}"
+          echo "Estado: ${{ github.event.pull_request.state }}"
+          echo "¿Ya fue fusionado? (Merged): ${{ github.event.pull_request.merged }}"
